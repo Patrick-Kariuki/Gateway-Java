@@ -1,7 +1,6 @@
 import java.util.Random;
 /**
  * Name: Patrick Kariuki.
- * JHED ID: pkariuk1
  * Date: 09/11/2022
  *
  * Gateway Computing: Java
