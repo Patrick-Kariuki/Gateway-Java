@@ -1,6 +1,5 @@
 /**
  * Name: Patrick Kariuki.
- * JHED ID: pkariuk1
  * Date: 11/09/2022
  *
  * Gateway Computing: Java
