@@ -161,5 +161,8 @@ public class Project1 {
       StdDraw.setPenColor(StdDraw.BLACK);
       StdDraw.setPenRadius(defaultPenRadius);
       StdDraw.line(percentBlueBlockWidth, 0, percentBlueBlockWidth, 1);
+
+      // Close the scanner
+      kb.close();
    }
 }
