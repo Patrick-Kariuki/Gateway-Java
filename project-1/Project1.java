@@ -159,7 +159,7 @@ public class Project1 {
       
       // Draws line separating the left and right blocks
       StdDraw.setPenColor(StdDraw.BLACK);
-      StdDraw.setPenRadius(0.01);
+      StdDraw.setPenRadius(defaultPenRadius);
       StdDraw.line(percentBlueBlockWidth, 0, percentBlueBlockWidth, 1);
    }
 }
