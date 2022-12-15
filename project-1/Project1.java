@@ -1,16 +1,25 @@
 import java.util.Scanner;
 
-/** Starter file for Project A, EN.500.112 Gateway Computing: Java.
-* Mondrian Art
-* Fall 2022
-* @author Joanne Selinski
-* @author <STUDENT TO DO: FILL IN YOUR NAME and JHED HERE!>
-*/
+/**
+ * Name: Patrick Kariuki.
+ * Date: 09/22/2022
+ *
+ * Gateway Computing: Java
+ * Johns Hopkins University
+ * Fall 2022
+ *
+ * Mondrian Art:
+ * This Project enables users to create a customised version of an art piece
+ * along the lines of Dutch artist Piet Mondrian. The artpiece is inspired
+ * by his piece 'Composition II in Red, Blue and Yellow' with additional
+ * elements from 'Mondrian Circle VI'.
+ * This project utilizes the Standard Draw Library for implementation. 
+ */
 public class Project1 {
 
    /** Main method.
-   * @param args not used
-   */
+    * @param args not used
+    */
    public static void main(String[] args) {
    
       Scanner kb = new Scanner(System.in);  // this allows us to collect input
