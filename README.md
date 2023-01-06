@@ -7,10 +7,10 @@ control structures, arrays, functions, files, testing, debugging, and structured
 efficiency and data visualization are also introduced. Students deploy programming to develop working solutions that address problems in engineering,
 science and other areas of contemporary interest that vary from section to section.
 
-The 5 projects included in this repo are as follows:
-Project 1: Mondrian Art
-Project 2: The Wordle Game
-Project 3: Car Data Analysis
-Project 4: Rectangle of Rectangles
-Project 5A: Lay Your Cards on the Table
-Project 5B: Let's Go Crazy
+## Projects:
+> - Project 1: Mondrian Art
+> - Project 2: The Wordle Game
+> - Project 3: Car Data Analysis
+> - Project 4: Rectangle of Rectangles
+> - Project 5A: Lay Your Cards on the Table
+> - Project 5B: Let's Go Crazy
