@@ -8,6 +8,7 @@ efficiency and data visualization are also introduced. Students deploy programmi
 science and other areas of contemporary interest that vary from section to section.
 
 ## Projects:
+Find project descriptions in respective project folders.
 > - Project 1: Mondrian Art
 > - Project 2: The Wordle Game
 > - Project 3: Car Data Analysis
