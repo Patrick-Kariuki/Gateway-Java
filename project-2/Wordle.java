@@ -61,19 +61,17 @@ public class Wordle {
       System.out.print("Please enter a choice: ");
       String text = kb.nextLine();
       
-      switch (text) {
-         case "n":
-            String word = newWord();
-            System.out.println(word);
-            
-         default:
-            System.out.println("Invalid option! Try again!");
-            printMenu();
-            text = kb.nextLine();
-         
-         
+      while ("e".equals(text) && "E".equals(text)) {
+         switch (text) {
+            case "n":
+               String word = newWord();
+               
+            default:
+               System.out.println("Invalid option! Try again!");
+               printMenu();
+               text = kb.nextLine();
+         }
       }
-
    }
 
    /**
