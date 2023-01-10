@@ -1,4 +1,14 @@
 /*
+ * Name: Patrick Kariuki.
+ * JHED ID: pkariuk1
+ * Date: 12/09/2022
+ *
+ * Gateway Computing: Java
+ * Fall 2022
+ *
+ * Project 5A: Let's go crazy.
+ * The Game class simulates a game of Crazy Eights.
+ *
  * @author Gateway Instructors
  * @version 1.0
  */
@@ -131,19 +141,16 @@ public class Game {
          handSize = 7;
       } 
       
-      
-      // TODO: implement the missing portion of this method
-      //
       // Here, you'll just need to add the part where cards
       // get dealt out to each player in round-robin fashion, i.e.,
       // deal one card to each player in player order, then a second 
       // card to each player in player order, then a third card, etc., 
       // until each player has the appropriate number of cards 
-
-
-
-
-
+      for (int i = 0; i < handSize; i++) {
+         for (int j = 0; j < players.length; j++) {
+            players[j].getHand().addCard(drawPile.discard());
+         }
+      }
    
       // Move top card from draw pile into discard pile, face up
       discardPile = new CardCollection("DiscardPile");
@@ -236,14 +243,8 @@ public class Game {
     * @return true if card1 matches card2, and false otherwise
     */
    public static boolean cardMatches(Card card1, Card card2) {
-
-
-
-      //TODO: implement me
-      return false; // Replace this stub
-      
- 
- 
+      return card1.getRank() == card2.getRank() || card1.getSuit() 
+         == card2.getSuit() || card1.getRank() == 8 || card2.getRank() == 8;
    }
 
 
@@ -252,12 +253,7 @@ public class Game {
     * @return true if the current player's hand is empty; false otherwise
     */
    private boolean gameOver() {
-
-      
-      // TODO: implement me
-      return false; // Replace this stub
-      
-            
+      return players[current].getHand().isEmpty();
    }
 
 
