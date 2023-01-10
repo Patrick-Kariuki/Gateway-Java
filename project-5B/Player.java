@@ -1,4 +1,15 @@
 /*
+ * Name: Patrick Kariuki.
+ * JHED ID: pkariuk1
+ * Date: 12/09/2022
+ *
+ * Gateway Computing: Java
+ * Fall 2022
+ *
+ * Project 5A: Let's go crazy.
+ * The Player class represents an player in Crazy Eights game.
+ * Each player is initialized with a name and a hand of cards.
+ *
  * @author Gateway Instructors
  * @version 1.0
  */
@@ -52,13 +63,13 @@ public abstract class Player {
     *         and false otherwise
     */
    public boolean hasPlayableCard(Card top) {
-
-
-
-      // TODO: implement me
-      return false;  // Replace this stub
-
-
+      for (int i = 0; i < hand.size(); i++) {
+         Card card = hand.getCard(i);
+         if (Game.cardMatches(card, top)) {
+            return true;
+         }
+      }
+      return false;
    }
 
 
