@@ -1,4 +1,14 @@
 /*
+ * Name: Patrick Kariuki.
+ * JHED ID: pkariuk1
+ * Date: 12/09/2022
+ *
+ * Gateway Computing: Java
+ * Fall 2022
+ *
+ * Project 5B: Let's go crazy.
+ * The Hand object represents a hand of cards.
+ * The hand is empty on initialization.
  * @author Gateway Instructors
  * @version 1.0
  */
@@ -42,13 +52,16 @@ public class Hand extends CardCollection {
          throw new IllegalArgumentException("invalid card index in Hand");
       }
       
+      Card cardToReturn = this.cards[i];
+      this.numFilled--;
 
-
-      // TODO: implement the rest of this method
-      return null; // Replace this stub
-
-
-
+      for (int idx = i; idx < cards.length - 1; idx++) {
+         cards[idx] = cards[idx + 1];
+      }
+      
+      this.cards[numFilled] = null;
+      
+      return cardToReturn;
    }
 
 
