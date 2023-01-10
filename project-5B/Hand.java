@@ -9,6 +9,7 @@
  * Project 5B: Let's go crazy.
  * The Hand object represents a hand of cards.
  * The hand is empty on initialization.
+ *
  * @author Gateway Instructors
  * @version 1.0
  */
