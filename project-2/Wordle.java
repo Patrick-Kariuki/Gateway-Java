@@ -61,7 +61,7 @@ public class Wordle {
       System.out.print("Please enter a choice: ");
       String text = kb.nextLine();
       
-      while ("e".equals(text) && "E".equals(text)) {
+      while (!"e".equals(text) && !"E".equals(text)) {
          switch (text) {
             case "n":
                String word = newWord();
