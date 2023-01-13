@@ -26,7 +26,7 @@ import java.util.Random;
  * Fun facts: The original Wordle was developed by Josh Wardle. Wardle's wife
  * chose the official word list for the game.
  *
- * 500.112 Gateway Computing: Java Spring 2022
+ * 500.112 Gateway Computing: Java Fall 2022
  */
 public class Wordle {
 
