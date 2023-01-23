@@ -70,26 +70,21 @@ public class Wordle {
                // Loop should end when user enters 'e' or 'E'
                return;
                
-            // Initialize game states and generate new word
             case "n":
+               // Initialize game states and generate new word
                word = newWord();
                numGuesses = MAX_GUESSES;
                numHints = MAX_HINTS;
                break;
             
-            // Display hint to player if they still have hints remaining   
             case "h":
+               // Display hint to player if they still have hints remaining 
                if (numHints > 0) {
-                  giveHint(word);
-                  numHints--;
-                  
-                  if (numHints == 1) {
-                     System.out.println("You have 1 hint remaining.");
-                  }
-                  
-                  else {
-                     System.out.println("You have " + numHints + 
-                        " hints remaining.");
+                  if (word != null) {
+                     giveHint(word);
+                     numHints--;
+                     System.out.printf("You have %d %s remaining.\n", 
+                        numHints, (numHints == 1 ? "hint" : "hints"));
                   }
                }
                
@@ -98,41 +93,46 @@ public class Wordle {
                }
                break;
                
-            // Prompts the player to enter a guess   
             case "g":
+               // Prompts the player to enter a guess   
                if (numGuesses == 0) {
+                  // The user is out of guesses, so they have to restart
+                  // Make the word variable null so that the user has to 
+                  // re-initialize the game using "n"/"N"
                   System.out.print("Sorry, you're out of guesses! " + 
                      "Use the \"n\"/\"N\" command to play again.");
+                  word = null;
                }
                
                else {
-                  System.out.println("Enter your guess:");
-                  String guess = kb.nextLine();
-                  boolean validGuess = validateGuess(word.length(), guess) 
-                     && checkGuess(word, guess);
+                  if (word != null) {
+                     System.out.println("Enter your guess:");
+                     String guess = kb.nextLine();
+                     boolean validGuess = validateGuess(word.length(), guess) 
+                        && checkGuess(word, guess);
                   
-                  if (validGuess) {
-                     System.out.println("Congrats! You won!");
-                     return;
-                  }
+                     if (validGuess) {
+                        System.out.println("Congrats! You won!");
+                        word = null;
+                     }
                   
-                  else {
-                     numGuesses--;
-                     
-                     if (numGuesses == 1) {
-                        System.out.println("You have 1 guess remaining.");
-                     }
-                     
-                     else if (numGuesses > 0) {
-                        System.out.println("You have " + numGuesses + 
-                           " guesses remaining.");
-                     }
-                     
-                     // If the user is out of guesses, they have to restart
                      else {
-                        System.out.println("Sorry, you're out of guesses! " +
-                           "The word was " + word + ". " + 
-                           "Use the \"n\"/\"N\" command to play again.");
+                        // Decrease the number of remaining guess attempts
+                        numGuesses--;
+                     
+                        if (numGuesses == 0) {
+                           System.out.println("Sorry, you're out of guesses! " +
+                              "The word was " + word.toUpperCase() + ". " + 
+                              "Use the \"n\"/\"N\" command to play again.");
+                           // Reset the word to null
+                           word = null;                   
+                        }
+                     
+                        else {
+                           System.out.printf("You have %d %s remaining.\n", 
+                              numGuesses, (numGuesses == 1 ? "guess" : 
+                              "guesses"));
+                        }
                      }
                   }
                }
@@ -142,6 +142,7 @@ public class Wordle {
                System.out.println("Invalid option! Try again!");
                break;
          }
+         
          // Print menu after every try until user decides to quit
          printMenu();
          System.out.print("Please enter a choice: ");
