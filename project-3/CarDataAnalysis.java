@@ -95,7 +95,7 @@ public class CarDataAnalysis {
       while (scan.hasNextLine()) {
          String line = scan.nextLine();
          String[] arr = line.split(",");
-         brandArr[i] = arr[2];
+         brandArr[i] = arr[BRAND];
          i++;
       }
       scan.close();
@@ -120,7 +120,7 @@ public class CarDataAnalysis {
       while (scan.hasNextLine()) {
          String line = scan.nextLine();
          String[] arr = line.split(",");
-         yearsArr[i] = Integer.parseInt(arr[4]);
+         yearsArr[i] = Integer.parseInt(arr[YEAR]);
          i++;
       }
       scan.close();
@@ -146,7 +146,7 @@ public class CarDataAnalysis {
       while (scan.hasNextLine()) {
          String line = scan.nextLine();
          String[] arr = line.split(",");
-         mileageArr[i] = Double.parseDouble(arr[6]);
+         mileageArr[i] = Double.parseDouble(arr[MILEAGE]);
          i++;
       }
       scan.close();
@@ -171,7 +171,7 @@ public class CarDataAnalysis {
       while (scan.hasNextLine()) {
          String line = scan.nextLine();
          String[] arr = line.split(",");
-         priceArr[i] = Double.parseDouble(arr[1]);
+         priceArr[i] = Double.parseDouble(arr[PRICE]);
          i++;
       }
       scan.close();
