@@ -203,7 +203,7 @@ public class CarDataAnalysis {
             sum += priceArr[i];
             count++;
             fileOut.print(i + ", " + brand + ", " + yearsArr[i]);
-            fileOut.println(", " + mileageArr[i] + ", " + priceArr[i]);
+            fileOut.println(", " + (int)mileageArr[i] + ", " + (int)priceArr[i]);
          }
       }
       fileOut.close();
@@ -415,7 +415,7 @@ public class CarDataAnalysis {
          System.out.println();
 
       }
-
+      keyboard.close();
    }
 
 }
