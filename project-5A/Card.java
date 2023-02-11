@@ -12,30 +12,32 @@
  * and a rank, which can either be Ace, 1, 2, 3, 4, 5, 6, 7,
  * 8, 9, Jack, Queen or King.
  */
- 
 public class Card {
-   // Defines cards suits as integers
+   /** CLUBS suit code. */
    private static final int CLUBS = 1;
+   /** DIAMONDS suit code. */
    private static final int DIAMONDS = 2;
+   /** HEARTS suit code. */
    private static final int HEARTS = 3;
+   /** SPADES suit code. */
    private static final int SPADES = 4;
-
-   // Defines cards numbers for non-numeric cards
+   
+   /** ACE card number code. */
    private static final int ACE = 1;
+   /** JACK card number code. */
    private static final int JACK = 11;
+   /** QUEEN card number code. */
    private static final int QUEEN = 12;
+   /** KING card number code. */
    private static final int KING = 13;
    
-   // Card suit representing either of the 4 suits
+   /** The card suit. */
    private int suit;
-   // card number 1 through 13
+   /** The card number. */
    private int cardRank;
    
    /**
    * Creates a card based on the passed suit and card number passed.
-   * Pre-conditions:
-   *     1 <= cardRank <= 13
-   *     1 <= suit <= 4
    * @param cardRank the card number
    * @param suit the suit number
    */
@@ -97,8 +99,8 @@ public class Card {
    
    /**
     * Returns true if suit and cardRank are valid:
-    *     1 <= cardRank <= 13
-    *     1 <= suit <= 4
+    * 1 <= cardRank <= 13
+    * 1 <= suit <= 4
     * @param cardRank the value of the card.
     * @param suit the value of suit.
     * @return true if suit and cardRank are both valid
