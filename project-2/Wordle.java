@@ -68,6 +68,7 @@ public class Wordle {
          switch (userInput) {
             case "e":
                // Loop should end when user enters 'e' or 'E'
+               kb.close();
                return;
                
             case "n":
